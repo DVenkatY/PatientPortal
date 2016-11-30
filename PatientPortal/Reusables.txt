@@ -1,0 +1,21 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          PageObjects.txt
+Resource          GlobalVariables.txt
+Library           UtilLibrary.py
+
+*** Keywords ***
+Open Browser and Maximize Window
+    Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window
+
+Browser Close
+    Close Browser
+
+Login
+    Input Text    ${LoginUserNameTextField Id}    ${Username}
+    Input Password    ${LoginPasswordTextField Id}    ${Password}
+    Click Element    ${LoginSubmitButtonField Id}
+
+Logout
+    Click Element    ${LogoutLinkField LinkText}
