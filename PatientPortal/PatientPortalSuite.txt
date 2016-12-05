@@ -67,7 +67,3 @@ ReportProblem
     Click Element    ${ReportSubmitButton Xpath}
     Page Should Contain    Message sent successfully.
     Log    Message Displayed
-
-Temp
-    [Tags]    Temp
-    Set Test Message    Hello
