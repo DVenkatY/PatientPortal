@@ -54,8 +54,7 @@ CreatePatientAppointment
     Log    ${dtComp}
     Log    ${status1}
     Log    ${status2}
-    Run Keyword If    ${dtComp} and '${status1}' == 'PASS' and '${status2}' == 'FAIL'    Log    Appointment Created
-    ...    ELSE IF !${dtComp} and '${status1}' == 'FAIL' and '${status2}' == 'PASS'    Log    Appointment not created
+    Run Keyword If    ${dtComp} and '${status1}' == 'PASS' and '${status2}' == 'FAIL'    Log    Appointment Created    ELSE IF !${dtComp} and '${status1}' == 'FAIL' and '${status2}' == 'PASS'    Log    Appointment not created
     ...    ELSE    Fail    Appointment should not create but created
 
 ReportProblem
@@ -68,3 +67,7 @@ ReportProblem
     Click Element    ${ReportSubmitButton Xpath}
     Page Should Contain    Message sent successfully.
     Log    Message Displayed
+
+Temp
+    [Tags]    Temp
+    Set Test Message    Hello
