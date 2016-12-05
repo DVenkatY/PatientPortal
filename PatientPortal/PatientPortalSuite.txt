@@ -67,4 +67,4 @@ ReportProblem
     Click Element    ${ReportSubmitButton Xpath}
     Page Should Contain    Message sent successfully.
     Log    Message Displayed
-    Set Test Message    Expected Message Displayed
+    Set Test Message    Message Displayed
