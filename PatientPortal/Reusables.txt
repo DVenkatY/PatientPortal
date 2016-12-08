@@ -1,8 +1,12 @@
 *** Settings ***
 Library           Selenium2Library
+Library           Collections
+Library           HttpLibrary.HTTP
 Resource          PageObjects.txt
 Resource          GlobalVariables.txt
 Library           UtilLibrary.py
+Library           Collections
+Library           HttpLibrary.HTTP
 
 *** Keywords ***
 Open Browser and Maximize Window
